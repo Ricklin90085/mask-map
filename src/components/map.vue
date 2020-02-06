@@ -1,11 +1,6 @@
 <template>
   <l-map :zoom="zoom" :center="center">
     <l-tile-layer :url="url" :attribution="attribution"/>
-      <!-- <l-marker v-for="c in storesData" :key="c.properties.id" :lat-lng="[c.geometry.coordinates[1], c.geometry.coordinates[0]]">
-        <l-popup>
-
-        </l-popup>
-      </l-marker> -->
     <l-marker-cluster :options="clusterOptions">
       <l-geo-json v-for="geoJson in storesData" :key="geoJson.id" :geojson="geoJson" :options="geoJsonOptions"></l-geo-json>
     </l-marker-cluster>

@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="nav-wrapper teal lighten-3">
-        <a href="#" class="brand-logo">
-          口罩地圖
-        </a>
-      </div>
-    </nav>
+    <Nav />
     <Map />
   </div>
 </template>
 
 <script>
+import Nav from './components/nav'
 import Map from './components/map'
 export default {
   name: 'app',
   components: {
+    Nav,
     Map
   }
 }
@@ -28,8 +24,5 @@ export default {
   html, body, #app{
     height: 100%;
     margin: 0;
-  }
-  nav .brand-logo{
-    left: 10px;
   }
 </style>
