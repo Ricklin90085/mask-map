@@ -83,7 +83,7 @@ export default {
       navigator.geolocation.getCurrentPosition((pos) => {
         this.center = this.myMarker = [pos.coords.latitude, pos.coords.longitude]
       }, (err) => {
-        console.log(err)
+        alert(err)
       })
     },
     popupContent (item) {
