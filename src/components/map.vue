@@ -142,7 +142,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .vue2leaflet-map{
     height: calc(100% - 64px) !important;
   }
