@@ -2,14 +2,19 @@ import Vue from 'vue'
 import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker, LPopup, LGeoJson } from 'vue2-leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import { Icon } from 'leaflet'
+
+import 'materialize-css/dist/css/materialize.min.css'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 
 Vue.component('l-map', LMap)
 Vue.component('l-tile-layer', LTileLayer)
 Vue.component('l-marker', LMarker)
+Vue.component('l-geo-json', LGeoJson)
 Vue.component('l-popup', LPopup)
 Vue.component('l-marker-cluster', Vue2LeafletMarkerCluster)
 
