@@ -1,12 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
+import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 Vue.component('l-map', LMap)
 Vue.component('l-tile-layer', LTileLayer)
 Vue.component('l-marker', LMarker)
+Vue.component('l-popup', LPopup)
+Vue.component('l-marker-cluster', Vue2LeafletMarkerCluster)
+
+Vue.use(VueAxios, axios)
 
 delete Icon.Default.prototype._getIconUrl
 
